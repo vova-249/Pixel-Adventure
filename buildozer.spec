@@ -19,7 +19,8 @@ source.include_exts = py,json,txt,png,jpg,atlas,mp3,wav,ogg
 version = 0.1
 
 # (list) Application requirements
-requirements = python3==3.10.12, hostpython3==3.10.12, Cython==0.29.33, pygame
+# Фиксируем версии Python и Cython (с маленькой буквы), чтобы Pygame собрался
+requirements = python3==3.10.12, hostpython3==3.10.12, cython==0.29.33, pygame
 
 # (list) Supported orientations
 orientation = landscape
@@ -53,7 +54,7 @@ android.allow_backup = True
 # Python for android (p4a) specific
 #
 
-# Обязательно для Pygame (НЕ kivy!)
+# КРИТИЧЕСКИ ВАЖНО: для Pygame нужен SDL2 bootstrap (НЕ kivy!)
 p4a.bootstrap = sdl2
 
 # Указываем ваш главный файл (если он называется не main.py)
