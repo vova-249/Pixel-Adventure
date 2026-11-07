@@ -23,6 +23,12 @@ jobs:
           pip install --upgrade pip
           pip install setuptools buildozer "cython<3.0" virtualenv
 
+      - name: Clean previous builds
+        run: |
+          # Удаляем старые артефакты, чтобы не тащить ошибки из прошлых сборок
+          rm -rf .buildozer bin
+          buildozer android clean || true
+
       - name: Build with Buildozer
         run: |
           buildozer -v android debug
