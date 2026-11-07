@@ -7,7 +7,7 @@ source.include_exts = py,json,txt,png,jpg,mp3,wav,ogg
 version = 0.1
 
 # Используем pygame-ce (он стабильнее собирается под Android)
-requirements = python3==3.10.12, hostpython3==3.10.12, cython==0.29.33, pygame-ce
+requirements = python3==3.10.12, hostpython3==3.10.12, cython==0.29.33, pygame==2.1.2
 orientation = landscape
 fullscreen = 1
 android.permissions = android.permission.INTERNET, android.permission.WRITE_EXTERNAL_STORAGE
