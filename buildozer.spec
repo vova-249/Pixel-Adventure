@@ -17,7 +17,7 @@ android.accept_sdk_license = True
 android.archs = arm64-v8a
 
 # Жестко фиксируем стабильный NDK
-android.ndk = 23b
+android.ndk = 25b
 
 # КРИТИЧЕСКИ ВАЖНО: Pygame требует SDL2
 p4a.bootstrap = sdl2
