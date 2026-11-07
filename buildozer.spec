@@ -49,7 +49,7 @@ android.archs = arm64-v8a, armeabi-v7a
 
 # (bool) enables Android auto backup feature
 android.allow_backup = True
-
+android.ndk = 23b
 #
 # Python for android (p4a) specific
 #
