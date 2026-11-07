@@ -5,7 +5,7 @@ package.domain = org.test
 source.dir = .
 source.include_exts = py,json,txt,png,jpg,mp3,wav,ogg
 version = 0.1
-requirements = python3==3.10.12, hostpython3==3.10.12, cython==0.29.33, pygame
+requirements = python3==3.10.12, hostpython3==3.10.12, cython==0.29.33, pygame-ce
 orientation = landscape
 fullscreen = 1
 android.permissions = android.permission.INTERNET, android.permission.WRITE_EXTERNAL_STORAGE
