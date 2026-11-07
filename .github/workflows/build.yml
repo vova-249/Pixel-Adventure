@@ -19,16 +19,12 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          # Убраны libtinfo5 и libncurses5-dev, так как их нет в Ubuntu 24.04
           sudo apt install -y git zip unzip openjdk-17-jdk autoconf libtool pkg-config zlib1g-dev libncurses-dev cmake libffi-dev libssl-dev
           pip install --upgrade pip
           pip install setuptools buildozer "cython<3.0" virtualenv
-      - name: Force correct NDK
+
+      - name: Build with Buildozer
         run: |
-          echo "ANDROID_NDK_HOME=/home/runner/.buildozer/android/platform/android-ndk-r23b" >> $GITHUB_ENV
-          echo "ANDROID_NDK_ROOT=/home/runner/.buildozer/android/platform/android-ndk-r23b" >> $GITHUB_ENV
-            - name: Build with Buildozer
-              run: |
           buildozer -v android debug
 
       - name: Upload APK
